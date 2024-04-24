@@ -45,4 +45,40 @@ def pomiarczasu(funkcja):
         print(f"czas wykonania funkcji {funkcja.__name__}:{endtime-starttime}s")
     return wrapper
 
+def sleep(funkcja):
+    def wrapper():
+        time.sleep(2)
+        return funkcja()
+    return wrapper
 
+
+lt = [i**3 for i in range(1_000_000)]
+
+
+@pomiarczasu
+@sleep
+def big_lista():
+    sum(lt)
+
+big_lista()
+
+import numpy as np
+
+ltnp = np.array(lt)
+
+
+@pomiarczasu
+@sleep
+def numpy_list():
+    np.sum(ltnp)
+
+numpy_list()
+
+
+@pomiarczasu
+def info():
+    inf = []
+    for u in range(1000):
+        inf.append(u)
+
+info()
