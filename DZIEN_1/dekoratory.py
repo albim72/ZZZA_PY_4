@@ -35,3 +35,14 @@ def msg(i):
     print(f"informacja: {i}")
 
 msg("728574835738")
+
+#przykład 2
+def pomiarczasu(funkcja):
+    def wrapper(*args):
+        starttime = time.perf_counter()
+        funkcja(*args)
+        endtime = time.perf_counter()
+        print(f"czas wykonania funkcji {funkcja.__name__}:{endtime-starttime}s")
+    return wrapper
+
+
