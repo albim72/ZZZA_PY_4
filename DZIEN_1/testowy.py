@@ -44,3 +44,24 @@ def osoba(funkcja,*args):
 print(osoba(witaj,"Olaf"))
 print(konkurs("Olga","Kraków",56))
 
+print("___________ funkcje zagnieżdzone _________")
+
+def rejestracja(oplata):
+    def lista(nr):
+        return f"jesteś zawodnikiem, nr startowy: {nr}"
+    def brak():
+        return f"uzupełnij wpłatę w ciągu 5 dni"
+    def error():
+        return f"błąd: 0 - brak wpłaty, 1 - wpłata"
+
+    if oplata == 1:
+        return lista
+    elif oplata == 0:
+        return brak
+    else:
+        return error
+
+
+print(rejestracja(0)())
+print(rejestracja(1)(433))
+print(rejestracja(456)())
