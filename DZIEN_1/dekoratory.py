@@ -82,3 +82,19 @@ def info():
         inf.append(u)
 
 info()
+
+def repeater(n):
+    def wrapper(funkcja):
+        def inner(*args):
+            for i in range(n):
+                funkcja(*args)
+        return inner
+    return wrapper
+
+
+@repeater(n=7)
+def komunkat(k,m):
+    print(f"komunikat: {k*m}")
+
+
+komunkat("tak",14)
