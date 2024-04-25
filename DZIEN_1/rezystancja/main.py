@@ -2,6 +2,7 @@ from oldresistor import OldResistor
 from resistor import Resistor
 from voltage import VoltageResistance
 from bounded import BoundedResistance
+from dokumentacja import Documentation
 
 r0 = OldResistor(10.2E2)
 print(f"________________ klasa {r0.__class__.__name__} ______________")
@@ -38,3 +39,11 @@ try:
       print(f'oporność obwodu: {r3.ohms} omów')
 except ValueError as r:
       print(r)
+
+
+d = Documentation(45,"Obwód układu R45","2024-03-12","obwód...")
+print(f"________________ klasa {r3.__class__.__name__} ______________")
+print(d)
+print(d.tytul)
+d.tytul = "Obwód wersja II"
+print(d.tytul)
