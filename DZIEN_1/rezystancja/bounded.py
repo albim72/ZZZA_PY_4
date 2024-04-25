@@ -1,8 +1,8 @@
 from resistor import Resistor
 
 class BoundedResistance(Resistor):
-    def __init__(self,ohms,abc):
-        super().__init__(ohms)
+    def __init__(self,ohms,abc=None):
+        super().__init__(ohms,width=None)
         self.abc = abc
         self.MSTALA = 1.09
 
