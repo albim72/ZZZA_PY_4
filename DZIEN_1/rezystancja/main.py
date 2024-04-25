@@ -42,7 +42,7 @@ except ValueError as r:
 
 
 d = Documentation(45,"Obwód układu R45","2024-03-12","obwód...")
-print(f"________________ klasa {r3.__class__.__name__} ______________")
+print(f"________________ klasa {d.__class__.__name__} ______________")
 print(d)
 print(d.tytul)
 d.tytul = "Obwód wersja II"
