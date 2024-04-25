@@ -1,4 +1,5 @@
 from typing import List,Protocol
+from decimal import Decimal
 
 class Item(Protocol):
     quantity:float
@@ -23,7 +24,9 @@ total = calculate_total(
     ]
 )
 
+d = Decimal("93.02")
 print(f"do zapłaty: {total:.2f} zł")
+print(f"wartość decimal: {d}")
 
 
 
