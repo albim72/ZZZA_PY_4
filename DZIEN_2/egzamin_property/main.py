@@ -53,3 +53,7 @@ print("__________________________________")
 print(f"ARCHIWUM:pierwsze podejście\nmath:{s4f.math_grade}\nwriting:{s4f.writing_grade}\nscience:{s4f.science_grade}")
 print(s4f==s4s)
 print(s4f.math_grade == s4s.math_grade)
+print(s4f.math_grade[1])
+
+ocena,a,b= s4f.math_grade
+print(a)
