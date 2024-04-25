@@ -8,7 +8,8 @@ else:
 def odpowiedz(self):
     return "Tak!Ziemia jest płaska!"
 
-
+def nowa_odpowiedz(self):
+    return "Nie!Ziemia jest elipsoidą!"
 
 def brak(self):    return "nie to nie! .... brak odpowiedzi"
 
@@ -16,7 +17,10 @@ def brak(self):    return "nie to nie! .... brak odpowiedzi"
 class SednoOdpowiedzi(type):
     def __init__(cls,clsname,bases,attribs):
         if required:
-            cls.odpowiedz = odpowiedz
+            if clsname == "Kopernik":
+               cls.odpowiedz = nowa_odpowiedz
+            else:
+                cls.odpowiedz = odpowiedz
         else:
             cls.odpowiedz = brak
 
