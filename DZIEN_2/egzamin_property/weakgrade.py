@@ -14,7 +14,7 @@ class Grade:
             raise ValueError('ocena musi być wartością z zakresu 0-100')
         self._values[instance] = value
 
-class ExamD:
+class ExamC:
     math_grade = Grade()
     writing_grade = Grade()
     science_grade = Grade()
