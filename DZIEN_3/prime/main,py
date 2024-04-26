@@ -1,0 +1,9 @@
+from synchronicznie import synchr
+from asynchronicznie import asynchr
+
+def main():
+    synchr()
+    asynchr()
+
+if __name__ == '__main__':
+    main()
