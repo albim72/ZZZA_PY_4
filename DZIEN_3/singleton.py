@@ -25,3 +25,16 @@ s2 = Sng()
 print(s1==s2)
 print(s1)
 print(s2)
+
+class A(Sng):
+    pass
+
+class B(Sng):
+    pass
+
+a1 = A()
+b1 = B()
+
+print(a1==b1)
+print(a1)
+print(b1)
